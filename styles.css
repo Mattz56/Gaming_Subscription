@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color-step: #483EFF;
+    --color-text-right: #012C5C;
+    --color-border: #E5E4E9;
+    --color-body: #EEF5FF;
+    --transition : all 0.4s ease-in-out;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--color-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+section {
+    width: 800px;
+    height: 600px;
+    margin: 0px auto;
+    border-radius: 13px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+/* ------------------------ LEFT SIDE ------------------------- */
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: 114%;
+    border-radius: 13px;
+    width: 250px;
+    height: 580px;
+    margin: 10px;
+    color: #ffffff;
+    padding: 45px;
+}
+.left_side h2 {
+    color: #979AFE;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    position: relative;
+    width: 48px;
+    top: -35px;
+    left: 35px;
+}
+.left_side p {
+    font-weight: bold;
+    display: block;
+    position: relative;
+    top: -35px;
+    left: 35px;
+}
+.ls_span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background-color: var(--bg-color-step);
+    color: #ffffff;
+    margin-left: -20px;
+}
+.ls_span:hover {
+    color: var(--color-text-right);
+    background-color: #BEE1FC;
+    transition: var(--transition);
+}
+
+/* ------- Ajout d'un style avec JS quand le boutton est active---------- */
+
+.active {
+    color: var(--color-text-right);
+    background-color: #BEE1FC;
+}
+
+/* ------------------------ PAGE 1 ------------------------- */
+
+fieldset {
+    border: none;
+}
+form {
+    width: auto;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+label {
+    font-weight: bold;
+}
+.form1 input:not(#btn_submit) {
+    width: 100%;
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    padding-left: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-text-right);
+    font-weight: bold;
+    font-size: 16px;
+}
+input:focus {
+    border: 2px solid var(--bg-color-step);
+    transition: var(--transition);
+}
+#btn_submit {
+    width: 20%;
+    height: 40px;
+    display: block;
+    background-color: var(--color-text-right);
+    color: #ffffff;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#btn_submit:hover {
+    background-color: #ffffff;
+    color: var(--color-text-right);
+    font-weight: bold;
+    border: 1px solid var(--color-text-right);
+    transition: var(--transition);
+}
+.right_side {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    width: 540px;
+    height: 580px;
+    padding: 45px;
+    color: var(--color-text-right);
+}
+.info p,
+.plan p, 
+.add_on p, 
+.summary p {
+    color: grey;
+    padding: 10px 0 10px 0;
+    font-size: 14px;
+}
+
+/* ------------------------ PAGE 2 ------------------------- */
+
+.plan, 
+.add_on, 
+.summary,
+.final_contenu {
+    height: 470px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 0 45px 0;
+}
+.arcade, 
+.advanced, 
+.pro {
+    border: 2px solid var(--color-border);
+    width: 30%;
+    height: 160px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.arcade:hover, 
+.advanced:hover, 
+.pro:hover {
+    border: 2px solid var(--color-text-right);
+    transition: var(--transition);
+    background-color: var(--color-body);
+    cursor: pointer;
+}
+.card h3 {
+    margin-top: 45px;
+}
+.valeur {
+    margin-top: -10px;
+}
+.yearly {
+    margin-top: -19px;
+    font-weight: bold;
+    color: var(--color-text-right);
+}
+.btns {
+    position: relative;
+    top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+.go_back, 
+.go_next {
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+}
+.go_next {
+    background-color: var(--color-text-right);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+.go_next:hover {
+    background-color: #ffffff;
+    color: var(--color-text-right);
+    font-weight: bold;
+    border: 1px solid var(--color-text-right);
+    transition: var(--transition);
+}
+.go_back {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: grey;
+}
+.go_back:hover {
+    transform: scale(1.1);
+    transition: var(--transition);
+    color: var(--color-text-right);
+}
+/* ------- Ajout d'un style avec JS pour la div cliquable ---------- */
+
+.clickee {
+    background-color: var(--color-body);
+    border: 2px solid var(--color-text-right);
+}
+
+/* ------------------------ PAGE 3 ------------------------- */
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin: 25px 0 25px 0;
+}
+.pickup_choice {
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+}
+.btns_choice {
+    position: relative;
+    top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.choice #p4,
+.choice #p5,
+.choice #p6  {
+    color: var(--bg-color-step);
+    position: absolute;
+    right: 60px;
+}
+.choice #p4 {
+    top: 160px;
+}
+.choice #p5 {
+    top: 265px;
+}
+.choice #p6 {
+    top: 365px;
+}
+.choice #online_services,
+.choice #larger_storage, 
+.choice #customizable_profile {
+    display: block;
+    position: absolute;
+    left: 70px;
+    cursor: pointer;
+}
+.choice #online_services {
+    top: 175px;
+}
+.choice #larger_storage {
+    top: 280px;
+}
+.choice #customizable_profile {
+    top: 380px;
+}
+.choice label {
+    position: absolute;
+    left: 120px;
+}
+.choice #la1 {
+    top: 160px;
+}
+.choice #la2 {
+    top: 265px;
+}
+.choice #la3 {
+    top: 365px;
+}
+.choice #p1,
+.choice #p2,
+.choice #p3 {
+    position: absolute;
+    left: 120px;
+}
+.choice #p1 {
+    top: 170px;
+}
+.choice #p2 {
+    top: 275px;
+}
+.choice #p3 {
+    top: 375px;
+}
+
+/* ------------------------ PAGE 4 ------------------------- */
+
+.btns_summary {
+    position: relative;
+    top: 79px;
+    display: flex;
+    justify-content: space-between;
+}
+.summary_resume {
+    background-color: var(--color-body);
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+.summary #arcade_p,
+.summary #arcade_price {
+    color: var(--color-text-right);
+    font-weight: bold;
+}
+.summary #arcade_price {
+    position: absolute;
+    right: 65px;
+    top: 160px;
+}
+hr {
+    width: 70%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 220px;
+    left: 80px;
+    opacity: 0.3;
+}
+.summary #arcade_p,
+.summary #online_p,
+.summary #larger_p,
+.summary #custom_p,
+.summary #total_p {
+    position: absolute;
+    left: 65px;
+}
+.summary #arcade_p {
+    top: 160px;
+}
+.summary #online_p {
+    top: 230px;
+}
+.summary #larger_p{
+    top: 285px;
+}
+.summary #custom_p{
+    top: 340px;
+}
+.summary #total_p{
+    top: 410px;
+}
+.summary #online_price,
+.summary #larger_price,
+.summary #custom_price {
+    color: var(--color-text-right);
+    position: absolute;
+    right: 65px;
+}
+.summary #online_price {
+    top: 230px;
+}
+.summary #larger_price {
+    top: 285px;
+}
+.summary #custom_price {
+    top: 340px;
+}
+.summary #total_price {
+    color: var(--bg-color-step);
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: 65px;
+    top: 410px;
+}
+
+/* ------------------------ PAGE 5 ------------------------- */
+
+.final_contenu img {
+    display: block;
+    position: absolute;
+    top: 150px;
+    left: 220px;
+}
+.final_contenu #final_thank {
+    position: absolute;
+    top: 260px;
+    left: 200px;
+}
+.final_contenu #final_p {
+    text-align: center;
+    font-size: 16px;
+    width: 440px;
+    position: absolute;
+    top: 310px;
+    color: grey;
+}
+
+
+
+/* ------------------------ MEDIA QUERIES ------------------------- */
+
+@media screen and (max-width:800px){
+    body {
+        background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat ;
+        background-size: 100%;
+    }
+    section {
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+    }
+    .left_side {
+        background: transparent;
+        width: 355px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: absolute;
+        top: 0;
+        height: 15px;
+    }
+    .left_side h2,
+    .left_side p {
+        display: none;
+    }
+    .info,
+    .add_on,
+    .card,
+    .summary,
+    form
+     {
+        width: 310px;
+    }
+    .card {
+        margin: 0;
+    }
+    .divs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 320px;
+        height: 90px;
+        margin: 13px 0 13px 0;
+    }
+    .divs img {
+        width: 45px;
+        display: block;
+        position: absolute;
+        left: 270px;
+    }
+    .divs h3 {
+        position: relative;
+        top: -20px;
+        left: 15px;
+    }
+    .divs p {
+        position: relative;
+        top: -15px;
+        left: 15px;
+    }
+    .btns {
+        width: 310px;
+        height: 40px;
+    }
+    .go_next,
+    .go_back {
+        width: 30%;
+    }
+    #btn_submit {
+        width: 30%;
+    }
+    .add_on #p4,
+    .add_on #p5, 
+    .add_on #p6 {
+        position: absolute;
+        left: 300px;
+    }
+    .add_on #p4 {
+        top: 145px;
+    }
+    .add_on #p5 {
+        top: 250px;
+    }
+    .add_on #p6 {
+        top: 350px;
+    }
+    .summary #arcade_price,
+    .summary #online_price,
+    .summary #larger_price,
+    .summary #custom_price,
+    .summary #total_price {
+        left: 270px;
+    }
+    hr {
+        width: 45%;
+    }
+    .final_contenu {
+        width: 310px;
+    }
+    .final_contenu img {
+        position: absolute;
+        left: 160px;
+    }
+    .final_contenu #final_thank {
+        position: absolute;
+        left: 140px;
+    }
+    .final_contenu #final_p {
+        width: 300px;
+    }
+    
+
+    
+}
+
+
